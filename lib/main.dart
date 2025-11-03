@@ -14,10 +14,55 @@ class MyApp extends StatelessWidget {
           title: const Text('Ejemplo de Widgets Flutter'),
           backgroundColor: Colors.blueAccent,
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/background.webp'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              // Nombre de la aplicación
+              const Text(
+                'Widgets básicos',
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  shadows: [
+                    Shadow(
+                      offset: Offset(2, 2),
+                      blurRadius: 4,
+                      color: Colors.black54,
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              // Mensaje de bienvenida
+              const Text(
+                '¡Bienvenido a Flutter!',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                  shadows: [
+                    Shadow(
+                      offset: Offset(1, 1),
+                      blurRadius: 3,
+                      color: Colors.black54,
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 30),
+
               // 1. Text
               const Text(
                 'Hola Mundo!',
@@ -87,6 +132,7 @@ class MyApp extends StatelessWidget {
               ),
             ],
           ),
+        ),
         ),
       ),
     );
